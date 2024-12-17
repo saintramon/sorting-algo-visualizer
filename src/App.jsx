@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Visualizer from './Visualizer';
-import Controls from './Controls';
+import Visualizer from './visualizer/Visualizer';
+import Controls from './controls/Controls';
 
 const App = () => {
     const [numBars, setNumBars] = useState(5);
@@ -10,6 +10,7 @@ const App = () => {
         setNumBars(numBars);
         setSpeed(speed);
     }
+
     return(
         <>
             <Visualizer numBars={numBars} speed={speed}/>
