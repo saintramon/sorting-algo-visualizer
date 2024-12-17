@@ -10,7 +10,7 @@ const Visualizer = ({numBars, speed, algorithm}) => {
         const arr = []; 
     
         for(let i = 0; i < numBars; i++){
-            arr.push(Math.floor(Math.random() * 100) + 1) //Generates a number from 1 to 100
+            arr.push(Math.floor(Math.random() * 500) + 1) //Generates a number from 1 to 100
         }
 
         setArray(arr);

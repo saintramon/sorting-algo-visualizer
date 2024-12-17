@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import './Controls.css'
 
 const Controls = ({ numBars, setNumBars, speed, setSpeed, onStart }) => {
 
@@ -12,13 +13,13 @@ const Controls = ({ numBars, setNumBars, speed, setSpeed, onStart }) => {
     }
 
     return(
-        <>
+        <div className="controls-container">
             <div className="bars-slider">
                 <label>Number of Bars: {numBars}</label>
                 <input 
                 type="range"
                 min="5"
-                max="50"
+                max="100"
                 value={numBars}
                 onChange={handleSetNumBars}
                 />
@@ -38,7 +39,7 @@ const Controls = ({ numBars, setNumBars, speed, setSpeed, onStart }) => {
             <div className="start-button">
                 <button onClick={() => onStart(numBars, speed)}>Start</button>
             </div>
-        </>
+        </div>
     );
 }
 
