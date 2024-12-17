@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Visualizer from './visualizer/Visualizer';
 import Controls from './controls/Controls';
+import './App.css'
 
 const App = () => {
     const [numBars, setNumBars] = useState(5);
