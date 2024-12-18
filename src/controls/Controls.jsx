@@ -14,9 +14,6 @@ const Controls = ({ numBars, setNumBars, speed, setSpeed, onStart }) => {
         setSpeed(e.target.value);
     }
 
-    const handleAlgorithmChange = (e) => {
-        setAlgorithm(e.target.value)
-    }
 
     return(
         <div className="controls-container">

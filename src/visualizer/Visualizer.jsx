@@ -3,32 +3,15 @@ import {useState, useEffect} from 'react';
 import bubbleSort from  '../algorithms/bubbleSort';
 import './Visualizer.css';
 
-const Visualizer = ({numBars, speed, algorithm}) => {
-
-    const [array, setArray] = useState([])
-
-    const genInitialArray = () => {
-        const arr = []; 
-    
-        for(let i = 0; i < numBars; i++){
-            arr.push(Math.floor(Math.random() * 500) + 1) //Generates a number from 1 to 100
-        }
-
-        setArray(arr);
-    };
-
-    useEffect(() => {
-        genInitialArray();
-    }, [numBars]);
+const Visualizer = ({numBars, speed, algorithm, array, setArray}) => {
 
     const startSort = async () => {
         switch(algorithm){
             case 'bubbleSort':
-                bubbleSort(array, setArray)
-                break;
-            
+                setArray(await bubbleSort(speed, setArray, speed))
+                break
             default:
-                console.error("There is something wrong");
+                console.error('There is an error!')
         }
     }
 
