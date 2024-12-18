@@ -4,12 +4,18 @@ import './Controls.css'
 
 const Controls = ({ numBars, setNumBars, speed, setSpeed, onStart }) => {
 
+    const [algorithm, setAlgorithm] = useState('bubbleSort');
+
     const handleSetNumBars = (e) => {
         setNumBars(e.target.value);
     }
 
     const handleSetSpeed = (e) => {
         setSpeed(e.target.value);
+    }
+
+    const handleAlgorithmChange = (e) => {
+        setAlgorithm(e.target.value)
     }
 
     return(
@@ -30,14 +36,14 @@ const Controls = ({ numBars, setNumBars, speed, setSpeed, onStart }) => {
                 <input 
                 type="range"
                 min="1"
-                max="100"
+                max="10"
                 value={speed}
                 onChange={handleSetSpeed} 
                 />
             </div>
 
             <div className="start-button">
-                <button onClick={() => onStart(numBars, speed)}>Start</button>
+                <button onClick={() => onStart(numBars, speed, algorithm)}>Start</button>
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
-import './Visualizer.css'
+import bubbleSort from  '../algorithms/bubbleSort';
+import './Visualizer.css';
 
 const Visualizer = ({numBars, speed, algorithm}) => {
 
@@ -19,6 +20,18 @@ const Visualizer = ({numBars, speed, algorithm}) => {
     useEffect(() => {
         genInitialArray();
     }, [numBars]);
+
+    const startSort = async () => {
+        switch(algorithm){
+            case 'bubbleSort':
+                bubbleSort(array, setArray)
+                break;
+            
+            default:
+                console.error("There is something wrong");
+        }
+    }
+
     
 
     return(
