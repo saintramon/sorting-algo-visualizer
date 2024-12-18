@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/sorting-algo-visualizer/static/css/main.a699eb5b.css",
-    "main.js": "/sorting-algo-visualizer/static/js/main.091b52d5.js",
+    "main.js": "/sorting-algo-visualizer/static/js/main.e464781a.js",
     "index.html": "/sorting-algo-visualizer/index.html",
     "main.a699eb5b.css.map": "/sorting-algo-visualizer/static/css/main.a699eb5b.css.map",
-    "main.091b52d5.js.map": "/sorting-algo-visualizer/static/js/main.091b52d5.js.map"
+    "main.e464781a.js.map": "/sorting-algo-visualizer/static/js/main.e464781a.js.map"
   },
   "entrypoints": [
     "static/css/main.a699eb5b.css",
-    "static/js/main.091b52d5.js"
+    "static/js/main.e464781a.js"
   ]
 }
